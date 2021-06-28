@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinderella</title>
+</head>
+<body>
+
+<h2>Cinderella</h2>
+
+<div style="width: 100%; height: 600px;">
+
+<table border="1" style="border: 1px solid; width: 100%; height: 100%;"> 
+    <tr>
+        <td style="text-align: center;width: 33%;"><p>1
+        </p><p>GET - Запрос на изменение значений для всех квадратов
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p>
+        </p><p>POST - При необходимости задать лукошко для сортировки</p></td>
+        <td style="text-align: center;width: 33%;"><p>2
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+        <td style="text-align: center;width: 33%;"><p>3
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;width: 33%;"><p>4
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+        <td style="text-align: center;width: 33%;"><p>5
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+        <td style="text-align: center;width: 33%;"><p>6
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;width: 33%;"><p>7
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+        <td style="text-align: center;width: 33%;"><p>8
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+        <td style="text-align: center;width: 33%;"><p>9
+        </p><p>POST - Определить значение парным 1-му квадрату.
+        </p><p>GET - Запрос на следуещее значение для данного квадрата</p></td>
+    </tr>
+</table>
+
+</div>
+
+<h2>Messages</h2>
+<form method="post" action="/add_message">
+    <input type="text" name="text">
+    <input type="text" name="tag">
+    <button type="submit">Add message</button>
+</form>
+
+<h3>Messages list</h3>
+{% for message in messages %}
+<div>{{ message.text }}&nbsp;
+    {% for tag in message.tags %}
+        <b>{{ tag.text }}</b>
+    {% endfor %}
+</div>
+{% endfor %}
+
+</body>
+</html>

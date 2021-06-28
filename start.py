@@ -35,9 +35,9 @@ def hello_world():
     return render_template('index.html')
 
 
-@app.route('/main', methods=['GET'])
+@app.route('/cinderella', methods=['GET'])
 def main():
-    return render_template('main.html', messages=Message.query.all())
+    return render_template('cinderella.html', messages=Message.query.all())
 
 
 @app.route('/add_message', methods=['POST'])
